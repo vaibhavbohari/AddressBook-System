@@ -2,37 +2,62 @@
 
 namespace AddressBook
 {
-    public class Program
+    class Program
     {
-        static void Main(string[] args)
+
+        //creating a new contact
+        public List<Contact> person = new List<Contact>();
+
+        private void NewPerson()
         {
-            string firstname;
-            string lastname;
-            string address;
-            string city;
-            string state;
-            string zipcode;
-            string email;
-            string phoneNumber;
+            Contact contact = new Contact();
 
             Console.WriteLine("Enter the FirstName : ");
-            Console.ReadLine();
+            contact.firstname = Console.ReadLine();
+
             Console.WriteLine("Enter the lastName : ");
-            Console.ReadLine();
+            contact.lastname = Console.ReadLine();
+
             Console.WriteLine("Enter the address : ");
-            Console.ReadLine();
+            contact.address = Console.ReadLine();
+
             Console.WriteLine("Enter the city : ");
-            Console.ReadLine();
+            contact.city = Console.ReadLine();
+
             Console.WriteLine("Enter the state : ");
-            Console.ReadLine();
+            contact.state = Console.ReadLine();
+
             Console.WriteLine("Enter the zipcode : ");
-            Console.ReadLine();
+            contact.zipcode = Console.ReadLine();
+
             Console.WriteLine("Enter the email : ");
-            Console.ReadLine();
+            contact.email = Console.ReadLine();
+
             Console.WriteLine("Enter the phoneNumber : ");
-            Console.ReadLine();
+            contact.phoneNumber = Console.ReadLine();
+            person.Add(contact);
+            Console.WriteLine(contact);
+        }
 
+        //details of address book
+        private void Print(Contact contact)
+        {
+            Console.WriteLine("-----Address book details-----");
+            Console.WriteLine("First Name: " + contact.firstname);
+            Console.WriteLine("Last Name: " + contact.lastname);
+            Console.WriteLine("Address: " + contact.address);
+            Console.WriteLine("City: " + contact.city);
+            Console.WriteLine("State: " + contact.state);
+            Console.WriteLine("Zip: " + contact.zipcode);
+            Console.WriteLine("Email: " + contact.email);
+            Console.WriteLine("phone Number: " + contact.phoneNumber);
+        }
 
+        static void Main(String[] args)
+        {
+            Console.WriteLine("Welcome To Address Book");
+            Program names = new Program();
+            names.NewPerson();
         }
 
 
