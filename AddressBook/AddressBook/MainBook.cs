@@ -10,7 +10,7 @@ namespace AddressBook
     {
         static void Main(String[] args)
         {
-            Program name = new Program();
+            Program  name = new Program ();
 
             while (true) ;
             {
